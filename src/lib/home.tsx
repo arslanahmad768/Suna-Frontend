@@ -65,7 +65,7 @@ export const siteConfig = {
   nav: {
     links: [
       { id: 1, name: 'Home', href: '#hero' },
-      { id: 2, name: 'Use Cases', href: '#use-cases' },
+      // { id: 2, name: 'Use Cases', href: '#use-cases' },
       // { id: 3, name: "Open Source", href: "#open-source" },
       { id: 4, name: 'Pricing', href: '#pricing' },
     ],
@@ -107,7 +107,7 @@ export const siteConfig = {
   cloudPricingItems: [
     {
       name: 'Basic',
-      price: '$29',
+      price: '$15',
       description: 'For individuals getting started with AI',
       buttonText: 'Get Started',
       buttonColor: 'bg-secondary text-white',
@@ -127,7 +127,7 @@ export const siteConfig = {
     },
     {
       name: 'Pro',
-      price: '$50',
+      price: '$39',
       description: 'For power users and professionals',
       buttonText: 'Go Pro',
       buttonColor: 'bg-primary text-primary-foreground',
@@ -147,7 +147,7 @@ export const siteConfig = {
     },
     {
       name: 'Enterprise',
-      price: '$200',
+      price: '$89',
       description: 'For organizations with custom needs',
       buttonText: 'Contact Sales',
       buttonColor: 'bg-secondary text-white',

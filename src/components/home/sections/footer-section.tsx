@@ -20,10 +20,10 @@ export function FooterSection() {
   }, []);
 
   const logoSrc = !mounted
-    ? '/lixichat-logo-black.png'
-    : resolvedTheme === 'dark'
     ? '/lixichat-logo-purple.png'
-    : '/lixichat-logo-black.png';
+    : resolvedTheme === 'dark'
+    ? '/lixichat-logo-grey.png'
+    : '/lixichat-logo-purple.png';
 
   return (
     <footer id='footer' className='w-full pb-0'>
@@ -36,7 +36,7 @@ export function FooterSection() {
               width={122}
               height={22}
               priority
-              className='dark:invert'
+              // className='dark:invert'
             />
           </Link>
           <p className='tracking-tight text-muted-foreground font-medium'>

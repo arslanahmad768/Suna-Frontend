@@ -13,8 +13,8 @@ import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { useAuth } from '@/components/AuthProvider';
 
-const INITIAL_WIDTH = "70rem";
-const MAX_WIDTH = "800px";
+const INITIAL_WIDTH = '70rem';
+const MAX_WIDTH = '800px';
 
 // Animation variants
 const overlayVariants = {
@@ -30,7 +30,7 @@ const drawerVariants = {
     y: 0,
     rotate: 0,
     transition: {
-      type: "spring",
+      type: 'spring',
       damping: 15,
       stiffness: 200,
       staggerChildren: 0.03,
@@ -57,7 +57,7 @@ export function Navbar() {
   const { scrollY } = useScroll();
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("hero");
+  const [activeSection, setActiveSection] = useState('hero');
   const { theme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const { user } = useAuth();
@@ -69,7 +69,7 @@ export function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = siteConfig.nav.links.map((item) =>
-        item.href.substring(1),
+        item.href.substring(1)
       );
 
       for (const section of sections) {
@@ -84,10 +84,10 @@ export function Navbar() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
@@ -101,10 +101,10 @@ export function Navbar() {
   const handleOverlayClick = () => setIsDrawerOpen(false);
 
   const logoSrc = !mounted
-    ? '/lixichat-logo-black.svg'
+    ? '/lixichat-logo-purple.svg'
     : resolvedTheme === 'dark'
-    ? '/lixichat-logo-purple.png'
-    : '/lixichat-logo-black.png';
+    ? '/lixichat-logo-grey.png'
+    : '/lixichat-logo-purple.png';
 
   return (
     <header
@@ -134,15 +134,14 @@ export function Navbar() {
                 width={140}
                 height={22}
                 priority
-                className='dark:invert'
+                // className='dark:invert'
               />
             </Link>
 
             <NavMenu />
 
-            <div className="flex flex-row items-center gap-1 md:gap-3 shrink-0">
-              <div className="flex items-center space-x-3">
-
+            <div className='flex flex-row items-center gap-1 md:gap-3 shrink-0'>
+              <div className='flex items-center space-x-3'>
                 {/* <Link
                   href="https://github.com/kortix-ai/suna"
                   target="_blank"
@@ -199,10 +198,10 @@ export function Navbar() {
             />
 
             <motion.div
-              className="fixed inset-x-0 w-[95%] mx-auto bottom-3 bg-background border border-border p-4 rounded-xl shadow-lg"
-              initial="hidden"
-              animate="visible"
-              exit="exit"
+              className='fixed inset-x-0 w-[95%] mx-auto bottom-3 bg-background border border-border p-4 rounded-xl shadow-lg'
+              initial='hidden'
+              animate='visible'
+              exit='exit'
               variants={drawerVariants}
             >
               {/* Mobile menu content */}
